@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import { MdArrowForward, MdArrowOutward } from "react-icons/md"; //
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
