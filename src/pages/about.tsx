@@ -14,12 +14,12 @@ const About: React.FC = () => {
           <div className="lg:col-span-2 col-span-1">
             <p className="text-justify lg:max-w-full">
               Imagine a team of passionate young professionals, united by a fire
-              to bridge market gaps and deliver world-class service. That's us!
-              We're a dynamic group of experts, each wielding specialized skills
+              to bridge market gaps and deliver world-class service. &apos;s us!
+              We&apos;re a dynamic group of experts, each wielding specialized skills
               to craft exceptional products. Our approach is refreshingly unique
               - we leverage cutting-edge technology to tackle your challenges
               head-on and deliver innovative solutions that perfectly align with
-              your needs. We don't just build products, we build partnerships.
+              your needs. We don&apos;t just build products, we build partnerships.
               We believe in collaborating closely with our clients to understand
               their vision and craft solutions that exceed expectations.
             </p>
@@ -41,7 +41,7 @@ const About: React.FC = () => {
               about the competition - with our expertise by your side, victory
               is practically guaranteed. Our diverse team brings a wealth of
               specialized skills to the table, ensuring exceptional product
-              creation every time. We're more than just a team; we're an
+              creation every time. We&apos;re more than just a team; we&apos;re an
               extension of your own, driving innovation and propelling your
               success.
             </p>
@@ -55,8 +55,8 @@ const About: React.FC = () => {
       />
       <RootitPrinciples />
       <DiscussCard
-        title="Let's Discuss"
-        subtitle="We'd love to hear from you!"
+        title="Let&apos;s Discuss"
+        subtitle="We&apos;d love to hear from you!"
         buttonText="Get In Touch"
       />{" "}
       <Footer />

@@ -48,7 +48,7 @@ const ServiceCard: React.FC = () => {
         </h5>
         <p className="font-normal lg:text-xl md:text-base text-sm text-black text-left pb-[10px] ">
           At Rootit, we redefine the standard for excellence in IT services.
-          Backed by a team of experts, we're your strategic partner in achieving
+          Backed by a team of experts, we&apos;re your strategic partner in achieving
           digital dominance. Choose us to experience unparalleled innovation,
           personalized support, and a commitment to your success.
           <b> Explore How Our Services Can Elevate Your Journey!</b>

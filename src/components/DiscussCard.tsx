@@ -47,7 +47,7 @@ const DiscussCard: React.FC<DiscussCardProps> = ({
       {buttonText2 && (
         <div className="mb-2">
           <p className="text-[#fdfdfe] md:text-xl text-lg font-semibold max-w-sm space-x-1 text-center md:text-left">
-            We're here to listen and eager to collaborate with you.
+            We&apos;re here to listen and eager to collaborate with you.
           </p>
         </div>
       )}

@@ -6,6 +6,7 @@ import {
   useTransform,
   motion,
 } from "framer-motion";
+import Link from "next/link";
 
 const CardScroller: React.FC = () => {
   const cardScroll = [
@@ -60,12 +61,12 @@ const CardScroller: React.FC = () => {
           See how we help our clients become the future best versions of
           themselves each and every day.
         </p>
-        <a
+        <Link
           href="/work"
           className="hidden lg:flex justify-center items-center pb-[5px] border-[3px] border-[#6633a0] p-3 bg-transparent rounded-full w-fit gap-x-1"
         >
           Our Work Projects <FaArrowRight />
-        </a>
+        </Link>
       </motion.div>
       <motion.div
         ref={targetRef}
@@ -115,12 +116,12 @@ const CardScroller: React.FC = () => {
         ))}
       </motion.div>
       <div className=" lg:hidden flex justify-center">
-        <a
+        <Link
           href="/work"
           className=" lg:hidden flex justify-center items-center border-[3px] border-[#6633a0] p-3 bg-transparent rounded-full w-fit gap-x-1"
         >
           Our Work Projects <FaArrowRight />
-        </a>
+        </Link>
       </div>
     </div>
   );

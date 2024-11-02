@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { MdArrowForward, MdArrowOutward } from "react-icons/md"; //
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { p } from "framer-motion/client";
+import Link from "next/link";
 
 const companyPages = [
   { page: "About Us", pageHref: "/about" },
@@ -13,7 +13,6 @@ const companyPages = [
 
 
 const Footer = () => {
-  const [currentPath, setCurrentPath] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false); // State for modal
 
   const EmailInput = () => {
@@ -86,9 +85,7 @@ const Footer = () => {
   ];
   
 
-  useEffect(() => {
-    setCurrentPath(window.location.pathname);
-  }, []);
+ 
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
@@ -100,13 +97,13 @@ const Footer = () => {
         {/* Top Section */}
         <div className="flex flex-row justify-between lg:items-center items-start mb-10 px-2">
           <div className="flex flex-col">
-            <a href="/">
+            <Link href="/">
               <img
                 src="/CompanyLogo.svg"
                 alt="Large screen image"
                 className="w-fit my-5 lg:mr-8"
               />
-            </a>
+            </Link>
             <div className="flex justify-center items-center gap-x-4 my-0 lg:hidden">
               <a
                 href="https://www.instagram.com/rootit.solutions/?igsh=emhkNzN5d2J6Y3lr"

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { MdArrowOutward } from "react-icons/md";
 
@@ -101,23 +102,23 @@ const Navbar: React.FC<NavbarProps> = ({ setPath }) => {
   return (
     <div className="flex justify-between items-center bg-inherit px-5 py-3">
       <div>
-        <a href="/">
+        <Link href="/">
           <img src="/CompanyLogo.svg" alt="Large screen image" className="hidden lg:block w-full" />
-        </a>
-        <a href="/">
+        </Link>
+        <Link href="/">
           <img src="/CompanyLogoSmall.svg" alt="Small screen image" className="block lg:hidden md:block w-full" />
-        </a>
+        </Link>
       </div>
 
       <div className="hidden lg:border lg:border-[#bababb] lg:bg-opacity-10 lg:px-6 lg:py-3 lg:shadow-lg lg:flex lg:rounded-full">
         {companyPages.map((page, index) => (
-          <a
+          <Link
             key={index}
             href={page.pageHref}
             className={`text-md bg-transparent px-4 ${page.pageHref === currentPath ? "text-[#7f47bf]" : "text-gray-200"}`}
           >
             {page.page}
-          </a>
+          </Link>
         ))}
       </div>
 
@@ -149,18 +150,18 @@ const Navbar: React.FC<NavbarProps> = ({ setPath }) => {
           >
             ✕
           </button>
-          <a href="/" className="absolute top-4 left-12 text-lg">
+          <Link href="/" className="absolute top-4 left-12 text-lg">
             <img src="/testimonials/smallLogoBlack.svg" alt="Logo" />
-          </a>
+          </Link>
           {companyPages.map((pages, index) => (
-            <a
+            <Link
               key={index}
               href={pages.pageHref}
               className={`text-lg font-semibold py-1 ${pages.pageHref === currentPath ? "text-[#7f47bf]" : "text-[#3a1465]"}`}
               onClick={toggleMobileMenu}
             >
               {pages.page}
-            </a>
+            </Link>
           ))}
         </div>
       )}

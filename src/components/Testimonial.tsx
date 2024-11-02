@@ -82,7 +82,7 @@ const Testimonial = () => {
     );
   };
 
-  const safeGet = (index) => {
+  const safeGet = (index: number) => {
     const length = testimonialData.length;
     return testimonialData[(index + length) % length];
   };
@@ -93,7 +93,7 @@ const Testimonial = () => {
         Our Clients Speak
       </h6>
       <p className="text-[#505052] lg:text-lg text-base mb-10 text-center">
-        Discover how we've exceeded expectations.
+        Discover how we&apos;ve exceeded expectations.
       </p>
       <div className="grid md:grid-cols-3 grid-cols-1 gap-2 md:mx-2 mx-8 mb-5">
         <div className="hidden md:flex md:flex-row flex-col justify-center items-center bg-gray-100 px-6 py-8 rounded-lg max-w-md mx-auto gap-3 transition-all duration-500">
