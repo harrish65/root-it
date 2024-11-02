@@ -11,7 +11,7 @@ const Header: React.FC = () => {
       heading3: "Process",
       content:
         "Unleash the Power of Possibilities by Building Tomorrow's Solutions, Today. Explore the Future with RootIT.",
-      path: "/home",
+      path: "/",
     },
     {
       heading1: "Our",
@@ -20,13 +20,13 @@ const Header: React.FC = () => {
       path: "/services",
     },
     {
-      heading1: "About",
-      heading2: "Us",
+      heading2: "About",
+      heading3: "Us",
       content: "Our story, our culture, your future",
       path: "/about",
     },
     {
-      heading1: "Career",
+      heading2: "Career",
       content: "At Root IT, it's not about us, it's about what happens next.",
       path: "/career",
     },
@@ -41,7 +41,6 @@ const Header: React.FC = () => {
 
   const [currentPath, setCurrentPath] = useState<string>("");
 
-  // This function will be passed to Navbar as a prop
   const handlePathChange = (path: string) => {
     setCurrentPath(path);
   };
@@ -52,42 +51,39 @@ const Header: React.FC = () => {
 
   return (
     <div
-      className="max-w-full"
+      className="w-full  bg-cover bg-center"
       style={{
-        background: `url(${bgImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundImage: `url(${bgImage})`,
       }}
     >
       <Navbar setPath={handlePathChange} />
       <hr className="w-full border-t border-gray-900 mb-4 lg:hidden" />
 
-      <div className="flex flex-col items-center justify-center h-full lg:mt-8 mt-6">
+      <div className="flex flex-col items-center justify-center lg:mt-8 mt-6 px-4 text-center">
         {currentContent && (
-          <div className="text-center">
-            <h1 className="lg:text-6xl text-4xl font-extrabold text-white mb-5 lg:max-w-xl max-w-sm mx-auto">
+          <div>
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-extrabold text-white mb-5 max-w-lg lg:max-w-xl">
               {currentContent.heading1}{" "}
-              <span className=" mb-5 text-[#7f3bcc]">
-                {currentContent.heading2}
-              </span>{" "}
+              <span className="text-[#7f3bcc]">{currentContent.heading2}</span>{" "}
               {currentContent.heading3 && (
-                <span className=" mb-4">{currentContent.heading3}</span>
+                <span>{currentContent.heading3}</span>
               )}
             </h1>
-            <p className="lg:text-lg text-base text-gray-300  lg:max-w-lg max-w-sm mx-auto">
+            <p className="text-base sm:text-lg text-gray-300 mx-auto max-w-sm lg:max-w-lg">
               {currentContent.content}
             </p>
             <img
               src={
                 currentPath === "/services" || currentPath === "/work"
                   ? "/scrollGifSmall.gif"
-                  : "/scrollGif.gif" // replace with the source for other paths
+                  : "/scrollGif.gif"
               }
               alt="scrollGif"
-              className={`
-                ${currentPath === "/services" || currentPath === "/work" 
-                  ? "w-10 mx-auto my-5" 
-                  : "w-1/4 mx-auto my-5"}`} 
+              className={`${
+                currentPath === "/services" || currentPath === "/work"
+                  ? "w-8 sm:w-10 lg:w-12 mx-auto mt-2 mb-10"
+                  : "w-1/4 mx-auto mt-2 mb-10"
+              }`}
             />
           </div>
         )}
@@ -97,5 +93,3 @@ const Header: React.FC = () => {
 };
 
 export default Header;
-
-

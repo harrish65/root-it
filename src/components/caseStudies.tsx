@@ -46,41 +46,37 @@ const CaseStudies: React.FC = () => {
   return (
     <div
       style={{ backgroundColor: "#DAD1F4" }}
-      className="lg:mx-5 lg:my-10 rounded-lg lg:px-5 lg:py-5"
+      className="lg:mx-5 mx-2 lg:my-10 my-5 rounded-lg lg:px-5 px-3 lg:py-5 py-3"
     >
       {caseStudy.map((study, index) => (
         <div
           key={index}
-          className={`flex flex-col lg:flex-row items-center justify-between rounded-lg lg:gap-6 p-6 mb-6 transition-all duration-1000 ${
+          className={`flex flex-col lg:flex-row items-center justify-between rounded-lg lg:gap-6 gap-3 p-6 mb-6 transition-all duration-1000 ${
             study.imageRight === "true" ? "lg:flex-row-reverse" : ""
           }`}
         >
           {/* Content Section with Animation */}
           <div
-            className={`w-full lg:w-1/2 flex flex-col justify-start lg:items-start lg:gap-y-10 gap-2 transition-transform duration-3000 ${
-              study.imageRight === "true"
-                ? "animate-slideRight"
-                : "animate-slideRight"
-            }`}
+            className={`w-full lg:w-1/2 flex flex-col justify-start lg:items-start lg:gap-y-10 gap-2 `}
           >
-            <h2 className="text-3xl font-bold mb-4">{study.heading}</h2>
-            <p className="text-gray-700 text-base mb-4">{study.content}</p>
+            <h2 className="lg:text-3xl text-xl font-bold mb-4">{study.heading}</h2>
+            <p className="text-gray-700 text-justify lg:text-base md:text-sm text-xs lg:mb-4 mb-3">{study.content}</p>
             <div className="flex flex-wrap gap-4">
               <span
-                className="text-white text-base px-4 py-2 rounded"
+                className="text-white lg:text-base md:text-sm text-xs  px-4 py-2 rounded"
                 style={{ backgroundColor: "#a58ee6" }}
               >
                 {study.button1}
               </span>
               <span
-                className="text-white text-base px-4 py-2 rounded"
+                className="text-white lg:text-base md:text-sm text-xs  px-4 py-2 rounded"
                 style={{ backgroundColor: "#a58ee6" }}
               >
                 {study.button2}
               </span>
               {study.button3 && (
                 <span
-                  className="text-white text-base px-4 py-2 rounded"
+                  className="text-white lg:text-base md:text-sm text-xs  px-4 py-2 rounded"
                   style={{ backgroundColor: "#a58ee6" }}
                 >
                   {study.button3}
@@ -98,7 +94,7 @@ const CaseStudies: React.FC = () => {
                 height={257}
                 className="rounded-lg w-full"
               />
-              <button className="absolute inset-0  flex items-center justify-center  text-white font-semibold px-4 py-2 gap-1 rounded bg-opacity-60   opacity-0 transition-opacity duration-300  bg-black  group-hover:opacity-100">
+              <button className="absolute inset-0  flex items-center justify-center  lg:text-base md:text-sm text-xs  text-white font-semibold px-4 py-2 gap-1 rounded bg-opacity-60   opacity-0 transition-opacity duration-300  bg-black  group-hover:opacity-100">
                 View case study <MdArrowForward />
               </button>
             </div>
