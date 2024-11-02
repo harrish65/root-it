@@ -1,7 +1,7 @@
 import DiscussCard from "@/components/DiscussCard";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import CaseStudies from "@/components/CaseStudies";
+import CaseStudies from "@/components/caseStudies";
 import React from "react";
 
 const OurWork: React.FC = () => {
